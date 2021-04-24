@@ -73,7 +73,7 @@ check.addEventListener("click",function check()
 
     if(count===0)
     {
-        output.innerText = "Oops, You Lost! \n Right answer is: "+wordgen+"\n Try Again."
+        output.innerText = "Oops, You Lost! \n Right Answer is: "+wordgen+"\n Try Again."
         answer.innerText = wordgen;
     }
 
