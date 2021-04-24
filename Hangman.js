@@ -1,4 +1,3 @@
-
 var colors=[
     "red",
     "green",
@@ -16,14 +15,17 @@ var colors=[
     "indigo",
     "brown"
 ]
-var Arr=[];
-var input=document.querySelector("#word");
+
 
 function randomcolorgenerate()
 {
     wordgen=colors[Math.floor(Math.random() * colors.length)];
 }
 
+
+
+var answer=document.querySelector("#answer");
+var Arr=[];
 function start()
 {
     for( var i=0; i<wordgen.length; i++)
@@ -32,16 +34,17 @@ function start()
     }
 
     str=Arr.join(" ");
-    document.getElementById("answer").innerHTML=str;
+    answer.innerText=str;
 }
 
 randomcolorgenerate();
 start();
 
+
+
 var count=6;
 var check=document.querySelector("#check");
-
-
+var input=document.querySelector("#word");
 check.addEventListener("click",function check()
 { 
     if(count>0)
@@ -56,17 +59,14 @@ check.addEventListener("click",function check()
                 Arr[i] = word;
                 match=1;
             }
-            else
-            {
-                match=0;
-            }
         }
     answer.innerText = Arr.join(" ");
 
+    var status=document.querySelector("#status");
         if(match===0)
         {
             count=count-1;
-            document.getElementById("status").innerHTML="Chances Left: "+count;
+            status.innerText="Chances Left: "+count;
             
         }
    
@@ -76,7 +76,23 @@ check.addEventListener("click",function check()
         output.innerText = "Oops, You Lost! \n Right answer is: "+wordgen+"\n Try Again."
         answer.innerText = wordgen;
     }
+
+
+    var c=0;
+
+        for(var x=0; x < wordgen.length;x++)
+        {
+            if(Arr[x]===wordgen[x])
+            {
+                c++;
+            }
+        }
+  
     
+    if(c===wordgen.length)
+    {
+        output.innerText = "Well Played, \nYou Won!"
+    }
     
      input.value="";
 }

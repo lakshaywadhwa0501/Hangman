@@ -5,6 +5,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Hangman</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 <style>
     .button
     {
@@ -43,14 +46,14 @@
 </head>
 <body>
 <center>
-    <h1 style="margin:0rem;">The Hangman Game</h1>
+    <h1 style="font-size:40px;margin:0.5rem; font-family: 'Dancing Script', cursive;">The Hangman Game</h1>
     <hr>
     <div class="middle" style="float: left; margin-left: 12rem; margin-top: 2rem;">
     
-    <h2 style="font-size:2rem;">Guess the Color Name!</h2>
+    <h2 style="font-size:2rem;font-family: 'Acme', sans-serif;">Guess the <span style="color:brown;">C</span><span style="color:blue;">o</span><span style="color:green;">l</span><span style="color:red;">o</span><span style="color:purple;">r</span> Name!</h2>
     
     <h3 style="font-size:1.5rem;">(Enter Letter by Letter, Small Letters Only)</h3>
-    <div id="answer" style="font-size: 20px;"></div>
+    <div id="answer" style="font-size: 20px; border: 1px solid black; width:6rem; padding:0.5rem"></div>
     <br>
     <input id="word" type="text" maxlength="1" style="font-size: 20px; width:1rem; padding:0.5rem;"></input>
     <br>
