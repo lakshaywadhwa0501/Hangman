@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hangman</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<style>
+    .button
+    {
+      font-size: 15px;
+      border-radius: 1px;
+      padding:0.5rem;
+      margin: 0.5rem;
+    }
+
+    .keyboard
+    {
+        margin:1rem;
+        padding:1rem;
+    }
+
+    .hangmanimg
+    {
+        padding:0rem;
+        margin:0rem;
+        height: 25rem;
+        width:15rem;
+        float:right;
+        padding-right: 5rem;
+    }
+
+    .output
+    {
+        border: 2px solid black;
+        margin:auto;
+        height: 5.9rem;
+        width: 20rem;
+        padding:0.5rem;
+        font-size: 2rem;
+    }
+</style>
+</head>
+<body>
+<center>
+    <h1 style="margin:0rem;">The Hangman Game</h1>
+    <hr>
+    <div class="middle" style="float: left; margin-left: 12rem; margin-top: 2rem;">
+    
+    <h2 style="font-size:2rem;">Guess the Color Name!</h2>
+    
+    <h3 style="font-size:1.5rem;">(Enter Letter by Letter, Small Letters Only)</h3>
+    <div id="answer" style="font-size: 20px;"></div>
+    <br>
+    <input id="word" type="text" maxlength="1" style="font-size: 20px; width:1rem; padding:0.5rem;"></input>
+    <br>
+    <button id="check" style="font-size: 20px; margin:0.5rem;">Check!</button> <button onClick="location.href=location.href" style="font-size: 20px; margin:0.5rem;">Replay!</button>
+    <br>
+    <div id="status" style=" padding:0.5rem; margin:0rem;font-size:1.5rem;" >Chances Left: 6</div>
+    <br>
+    <div id="output" class="output" style="font-size: 30px;"></div>
+    </div>
+
+    <div class="image" style="margin-top:4rem; margin-right: 8rem;">
+        <img id="hangman" class="hangmanimg" src='images/0.jpg' alt="">
+    </div>
+</center>   
+<script src="Hangman.js" type="text/javascript"></script>
+</body>
+</html>
