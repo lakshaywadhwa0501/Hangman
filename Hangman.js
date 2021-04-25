@@ -67,6 +67,36 @@ check.addEventListener("click",function check()
         {
             count=count-1;
             status.innerText="Chances Left: "+count;
+            switch(count)
+            {
+            case 0:
+                document.getElementById('hangman').src='images/7.jpg';
+                break;
+
+            case 1:
+                document.getElementById('hangman').src='images/6.jpg';
+                break;
+
+            case 2:
+                document.getElementById('hangman').src='images/5.jpg';
+                break;
+                
+            case 3:
+                document.getElementById('hangman').src='images/4.jpg';
+                break;
+            
+            case 4:
+                document.getElementById('hangman').src='images/3.jpg';
+                break;
+            
+            case 5:
+                document.getElementById('hangman').src='images/2.jpg';
+                break;
+                
+            case 6:
+                document.getElementById('hangman').src='images/1.jpg';
+                break;
+            }
             
         }
    
@@ -75,6 +105,7 @@ check.addEventListener("click",function check()
     {
         output.innerText = "Oops, You Lost! \n Right Answer is: "+wordgen+"\n Try Again."
         answer.innerText = wordgen;
+        document.getElementById("check").disabled = true;
     }
 
 
@@ -92,6 +123,7 @@ check.addEventListener("click",function check()
     if(c===wordgen.length)
     {
         output.innerText = "Well Played, \nYou Won!"
+        document.getElementById("check").disabled = true;
     }
     
      input.value="";
